@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Ejecuta npm run lint
+npm run format
+npm run lint -- --fix
+npm run lint
+LINT_STATUS=$?
+
+# Bloquea el commit si el linter devuelve errores
+if [ "$LINT_STATUS" -ne 0 ]; then
+    echo "Linting errors found. Commit aborted."
+    exit 1
+fi
+
+echo "Linting passed. Proceeding with commit."
+exit 0
