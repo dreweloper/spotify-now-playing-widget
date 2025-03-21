@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"next": "15.2.3",
@@ -23,6 +24,7 @@
 		"eslint-config-next": "15.2.3",
 		"eslint-config-prettier": "^10.1.1",
 		"eslint-plugin-prettier": "^5.2.3",
+		"husky": "^9.1.7",
 		"prettier": "^3.5.3",
 		"typescript": "^5"
 	}
